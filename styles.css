@@ -490,15 +490,15 @@ svg {
 }
 
 .hours-line span {
-  color: var(--gray);
-  font-size: clamp(1.73rem, 7vw, 1.73rem);
-  letter-spacing: 0.1em;
+    color: var(--gray);
+    font-size: 1.73rem; /* ALTERA AQUI PARA O CELULAR */
+    letter-spacing: 0.1em;
 }
 
 .hours-line strong {
-  font-weight: 400;
-  font-size: clamp(1.29rem, 7vw, 1.29rem);
-  letter-spacing: 0.02em;
+    font-weight: 400;
+    font-size: 1.29rem; /* ALTERA AQUI PARA O CELULAR */
+    letter-spacing: 0.02em;
 }
 
 .phone-number,
@@ -653,11 +653,24 @@ svg {
     margin-top: 0;
   }
 
+  .header-inner {
+        min-height: 8.5rem;
+    }
+
+    .hours-line span {
+        font-size: 1.73rem;
+    }
+
+    .hours-line strong {
+        font-size: 1.29rem;
+    }
+}
+
   .action-group {
     grid-column: 2;
     margin-top: 2.5rem;
   }
-}
+
 
 @media (min-width: 1100px) {
   .info-section-content {
