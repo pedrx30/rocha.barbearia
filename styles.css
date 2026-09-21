@@ -383,11 +383,11 @@ svg {
 }
 
 .site-footer {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   min-height: 6.5rem;
   border-top: 1px solid var(--line);
   align-items: center;
-  justify-content: space-between;
   gap: 1.5rem;
   color: var(--gray);
   font-size: 0.68rem;
@@ -401,6 +401,31 @@ svg {
   display: inline-flex;
   align-items: center;
   color: var(--white);
+}
+
+.site-footer > a:last-child {
+  justify-self: end;
+}
+
+.footer-signature {
+  margin: 0;
+  font-size: 0.62rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-align: center;
+  text-transform: none;
+}
+
+.footer-signature a {
+  display: inline;
+  min-height: 0;
+  border-bottom: 1px solid var(--line);
+  transition: border-color 180ms ease;
+}
+
+.footer-signature a:hover,
+.footer-signature a:focus-visible {
+  border-color: currentColor;
 }
 
 .site-footer a span {
@@ -646,6 +671,17 @@ svg {
 }
 
 @media (max-width: 420px) {
+  .site-footer {
+    grid-template-columns: 1fr auto;
+    padding-block: 1.25rem;
+  }
+
+  .footer-signature {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    justify-self: center;
+  }
+
   .header-link span {
     position: absolute;
     width: 1px;
