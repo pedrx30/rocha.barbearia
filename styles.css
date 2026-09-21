@@ -491,12 +491,14 @@ svg {
 
 .hours-line span {
   color: var(--gray);
-  font-size: 0.69rem;
+  font-size: clamp(1.73rem, 7vw, 1.73rem);
+  letter-spacing: 0.1em;
 }
 
 .hours-line strong {
   font-weight: 400;
-  font-size: 0.69rem;
+  font-size: clamp(1.29rem, 7vw, 1.29rem);
+  letter-spacing: 0.02em;
 }
 
 .phone-number,
