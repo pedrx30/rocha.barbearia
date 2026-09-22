@@ -233,6 +233,105 @@ svg {
   border-color: var(--white);
 }
 
+.services-section {
+  padding: 4rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.services-heading {
+  margin-bottom: 2rem;
+}
+
+.services-heading h2 {
+  max-width: 12ch;
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.35rem, 9vw, 4.5rem);
+  font-weight: 400;
+  letter-spacing: -0.045em;
+  line-height: 1;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: 1fr;
+  gap: 0.75rem;
+}
+
+.service-card {
+  display: flex;
+  min-width: 0;
+  padding: 1.25rem;
+  border: 1px solid var(--line);
+  flex-direction: column;
+}
+
+.service-card h3 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.55rem, 7vw, 2.25rem);
+  font-weight: 400;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+}
+
+.service-description {
+  max-width: 32rem;
+  margin: 1.25rem 0 2rem;
+  color: var(--gray);
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.service-card-footer {
+  display: flex;
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.service-price {
+  flex: 0 0 auto;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.85rem;
+  font-weight: 400;
+  letter-spacing: -0.025em;
+  line-height: 1;
+}
+
+.service-book {
+  display: inline-flex;
+  min-width: 7.5rem;
+  min-height: 3.25rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--white);
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  color: var(--black);
+  background: var(--white);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: color 180ms ease, background-color 180ms ease;
+}
+
+.service-book:hover,
+.service-book:focus-visible {
+  color: var(--white);
+  background: transparent;
+}
+
+.service-book:focus-visible {
+  outline: 2px solid var(--white);
+  outline-offset: 3px;
+}
+
 .work-section {
   padding: 4rem 0 5rem;
 }
@@ -583,6 +682,22 @@ svg {
     padding: 1.15rem;
   }
 
+  .services-section {
+    padding: 5.5rem 0 6.5rem;
+  }
+
+  .services-heading {
+    margin-bottom: 2.5rem;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .service-card {
+    padding: 1.5rem;
+  }
+
   .carousel-hint {
     display: block;
   }
@@ -673,6 +788,10 @@ svg {
 
 
 @media (min-width: 1100px) {
+  .services-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
   .info-section-content {
     grid-template-columns: minmax(22rem, 1fr) minmax(25rem, 0.85fr);
     column-gap: 8rem;
